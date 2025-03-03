@@ -15,8 +15,14 @@ const WelcomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Animated.View entering={FadeIn.duration(2000)} style={styles.logoContainer}>
-        <Image source={require("../assets/images/logo.png")} style={styles.logo} />
+      <Animated.View
+        entering={FadeIn.duration(2000)}
+        style={styles.logoContainer}
+      >
+        <Image
+          source={require("../assets/images/logo.png")}
+          style={styles.logo}
+        />
         <Text style={styles.title}>HealthAI</Text>
         <Text style={styles.subtitle}>Ваш персональний помічник здоров'я</Text>
       </Animated.View>
