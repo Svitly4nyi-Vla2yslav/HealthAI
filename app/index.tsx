@@ -8,7 +8,7 @@ const WelcomeScreen = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push("/screens/RegisterScreen"); // Перехід на реєстрацію
+      router.push("/screens/SignUpScreen"); // Перехід на реєстрацію
     }, 5000);
     return () => clearTimeout(timer);
   }, []);
