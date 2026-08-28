@@ -44,7 +44,9 @@ const SignUpScreen = () => {
       Alert.alert("Помилка", "Будь ласка, заповніть всі поля");
       return;
     }
-    console.log("Email:", email, "Password:", password);
+
+    // TODO: Connect the form to the real authentication flow.
+    // Never log passwords or other credentials, even during development.
   };
 
   return (
