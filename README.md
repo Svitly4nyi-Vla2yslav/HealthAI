@@ -82,6 +82,10 @@ npm run lint        # Expo lint
 npm test            # Jest in watch mode
 ```
 
+## Authentication configuration
+
+The current Google and Facebook sign-in setup still uses placeholder client IDs in the prototype screen. Replace those placeholders with environment- or build-config values when wiring real OAuth credentials; do not commit production client secrets or tokens to the repository.
+
 ## Security and privacy note
 
 Authentication forms must never log passwords, tokens or other credentials. A previous development `console.log` that exposed sign-in values was removed from the project history in a dedicated security fix.
