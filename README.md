@@ -1,50 +1,93 @@
-# Welcome to your Expo app 👋
+# HealthAI
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+HealthAI is an Expo / React Native portfolio prototype focused on a mobile-first health-oriented interface and authentication-style onboarding flows.
 
-## Get started
+The project is built with Expo Router and TypeScript and can run on Android, iOS and the web. It is currently a development/portfolio project rather than a production medical application.
 
-1. Install dependencies
+## Current scope
 
-   ```bash
-   npm install
-   ```
+- Expo Router based application structure
+- Tab navigation with React Navigation
+- Sign-up / onboarding screen work
+- Shared styled-components based UI primitives
+- Responsive React Native / React Native Web support
+- Web export and Netlify configuration
+- Jest / jest-expo test setup
+- TypeScript configuration
 
-2. Start the app
+## Tech stack
 
-   ```bash
-    npx expo start
-   ```
+- Expo 52
+- React 18
+- React Native 0.76
+- TypeScript
+- Expo Router
+- React Navigation
+- styled-components
+- Jest / jest-expo
+- React Native Web
 
-In the output, you'll find options to open the app in a
+## Project structure
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+HealthAI/
+├── app/
+│   ├── (tabs)/        # Tab-based routes
+│   ├── screens/       # Authentication/onboarding screens
+│   ├── _layout.tsx    # Root router layout
+│   └── index.tsx      # Entry route
+├── assets/            # Images, fonts and static assets
+├── components/        # Reusable interface components
+├── constants/         # Shared constants/theme values
+├── hooks/             # Custom hooks
+├── scripts/           # Project helper scripts
+├── netlify.toml       # Web deployment configuration
+└── package.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Getting started
 
-## Learn more
+### Requirements
 
-To learn more about developing your project with Expo, look at the following resources:
+- Node.js 18+ recommended
+- npm
+- Expo tooling through `npx`
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Install
 
-## Join the community
+```bash
+npm install
+```
 
-Join our community of developers creating universal apps.
+### Start development
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npm start
+```
+
+or run a target directly:
+
+```bash
+npm run android
+npm run ios
+npm run web
+```
+
+## Build and quality commands
+
+```bash
+npm run build       # Export the web build with Expo
+npm run export-web  # Explicit web export
+npm run lint        # Expo lint
+npm test            # Jest in watch mode
+```
+
+## Security and privacy note
+
+Authentication forms must never log passwords, tokens or other credentials. A previous development `console.log` that exposed sign-in values was removed from the project history in a dedicated security fix.
+
+HealthAI is a portfolio prototype. It does not provide medical advice, diagnosis or treatment and should not be treated as a production healthcare system without a full security, privacy, legal and clinical review.
+
+## Project status
+
+The repository still contains prototype and starter-derived areas. Before production use, authentication, data persistence, API boundaries, consent/privacy flows, accessibility and medical-data handling would need to be designed and audited explicitly.
