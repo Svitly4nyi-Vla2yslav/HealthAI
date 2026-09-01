@@ -59,11 +59,11 @@ const SignUpScreen = () => {
       {/* Кнопки соц. мереж */}
       <SocialContainer>
         <SocialButton onPress={() => googlePromptAsync()}>
-          <SocialLogo source={require("../../assets/icons/Facebook_png.png")} />
+          <SocialLogo source={require("../../assets/icons/google png.png")} />
         </SocialButton>
 
         <SocialButton onPress={() => facebookPromptAsync()}>
-          <SocialLogo source={require("../../assets/icons/google png.png")} />
+          <SocialLogo source={require("../../assets/icons/Facebook_png.png")} />
         </SocialButton>
       </SocialContainer>
 
