@@ -49,7 +49,8 @@ HealthAI/
 
 ### Requirements
 
-- Node.js 18+ recommended
+- Node.js 18+ for local Expo development
+- Node.js 22 for parity with the current Netlify build configuration
 - npm
 - Expo tooling through `npx`
 
@@ -81,6 +82,12 @@ npm run export-web  # Explicit web export
 npm run lint        # Expo lint
 npm test            # Jest in watch mode
 ```
+
+## Web deployment
+
+The repository includes a Netlify configuration for the web export. Netlify currently pins Node.js 22 and executes `npm install && npm run build` during deployment.
+
+Because Expo web-export conventions can change between SDK versions, verify the generated output directory after dependency or Expo upgrades and keep the Netlify `publish` setting aligned with the actual export folder before relying on a production deployment.
 
 ## Authentication configuration
 
