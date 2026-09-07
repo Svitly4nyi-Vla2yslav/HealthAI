@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, TextInput, TouchableOpacity, Alert, Image } from "react-native";
+import { Alert } from "react-native";
 import * as WebBrowser from "expo-web-browser";
 import * as Google from "expo-auth-session/providers/google";
 import * as Facebook from "expo-auth-session/providers/facebook";
@@ -13,7 +13,6 @@ import {
   SocialContainer,
   SocialButton,
   SocialLogo,
-  SocialText,
   StyledInput,
   SignInButton,
   ButtonText,
@@ -30,12 +29,12 @@ const SignUpScreen = () => {
   const router = useRouter();
 
   // Google Auth
-  const [_, googleResponse, googlePromptAsync] = Google.useAuthRequest({
+  const [, , googlePromptAsync] = Google.useAuthRequest({
     clientId: "ВАШ_GOOGLE_CLIENT_ID",
   });
 
   // Facebook Auth
-  const [___, facebookResponse, facebookPromptAsync] = Facebook.useAuthRequest({
+  const [, , facebookPromptAsync] = Facebook.useAuthRequest({
     clientId: "ВАШ_FACEBOOK_APP_ID",
   });
 
@@ -58,11 +57,19 @@ const SignUpScreen = () => {
 
       {/* Кнопки соц. мереж */}
       <SocialContainer>
-        <SocialButton onPress={() => googlePromptAsync()}>
+        <SocialButton
+          onPress={() => googlePromptAsync()}
+          accessibilityRole="button"
+          accessibilityLabel="Увійти через Google"
+        >
           <SocialLogo source={require("../../assets/icons/google png.png")} />
         </SocialButton>
 
-        <SocialButton onPress={() => facebookPromptAsync()}>
+        <SocialButton
+          onPress={() => facebookPromptAsync()}
+          accessibilityRole="button"
+          accessibilityLabel="Увійти через Facebook"
+        >
           <SocialLogo source={require("../../assets/icons/Facebook_png.png")} />
         </SocialButton>
       </SocialContainer>
@@ -74,6 +81,7 @@ const SignUpScreen = () => {
         onChangeText={setEmail}
         keyboardType="email-address"
         autoCapitalize="none"
+        accessibilityLabel="Email"
       />
 
       <StyledInput
@@ -81,16 +89,25 @@ const SignUpScreen = () => {
         value={password}
         onChangeText={setPassword}
         secureTextEntry
+        accessibilityLabel="Пароль"
       />
 
-      <SignInButton onPress={handleSignIn}>
+      <SignInButton
+        onPress={handleSignIn}
+        accessibilityRole="button"
+        accessibilityLabel="Увійти"
+      >
         <ButtonText>Увійти</ButtonText>
       </SignInButton>
 
       {/* Посилання на реєстрацію */}
       <Footer>
         <FooterText>Немає акаунту? </FooterText>
-        <RegisterLink onPress={() => router.push("/screens/SignUpScreen")}>
+        <RegisterLink
+          onPress={() => router.push("/screens/SignUpScreen")}
+          accessibilityRole="link"
+          accessibilityLabel="Зареєструватися"
+        >
           Зареєструватися
         </RegisterLink>
       </Footer>
