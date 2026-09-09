@@ -96,7 +96,7 @@ The current Google and Facebook sign-in setup still uses placeholder client IDs 
 
 ## Security and privacy note
 
-Authentication forms must never log passwords, tokens or other credentials. A previous development `console.log` that exposed sign-in values was removed from the project history in a dedicated security fix.
+Authentication forms must never log passwords, tokens or other credentials. A previous development `console.log` that exposed sign-in values was removed from the current code in a dedicated security fix; repository history should not be assumed to be free of previously committed sensitive values unless it has been explicitly rewritten and audited.
 
 HealthAI is a portfolio prototype. It does not provide medical advice, diagnosis or treatment and should not be treated as a production healthcare system without a full security, privacy, legal and clinical review.
 
