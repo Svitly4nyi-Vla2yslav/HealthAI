@@ -103,3 +103,7 @@ HealthAI is a portfolio prototype. It does not provide medical advice, diagnosis
 ## Project status
 
 The repository still contains prototype and starter-derived areas. Before production use, authentication, data persistence, API boundaries, consent/privacy flows, accessibility and medical-data handling would need to be designed and audited explicitly.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for the full terms.
