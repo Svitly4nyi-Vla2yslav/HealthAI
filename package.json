@@ -10,6 +10,7 @@
     "web": "expo start --web",
     "export-web": "npx expo export --platform web",
     "build": "expo export --platform web",
+    "typecheck": "tsc --noEmit",
     "test": "jest --watchAll",
     "test:ci": "jest --runInBand",
     "lint": "expo lint"
