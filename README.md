@@ -80,6 +80,7 @@ npm run web
 npm run build       # Export the web build with Expo
 npm run export-web  # Explicit web export
 npm run lint        # Expo lint
+npm run typecheck   # Run TypeScript validation without emitting files
 npm test            # Jest in watch mode for local development
 npm run test:ci     # Run Jest once without watch mode (CI/pre-push)
 ```
