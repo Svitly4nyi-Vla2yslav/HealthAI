@@ -11,7 +11,7 @@ const WelcomeScreen = () => {
       router.push("/screens/SignUpScreen"); // Перехід на реєстрацію
     }, 5000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [router]);
 
   return (
     <View style={styles.container}>
