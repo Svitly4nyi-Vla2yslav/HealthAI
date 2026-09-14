@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit",
     "test": "jest --watchAll",
     "test:ci": "jest --runInBand",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "check": "npm run lint && npm run typecheck && npm run test:ci"
   },
   "jest": {
     "preset": "jest-expo"
