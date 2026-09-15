@@ -77,6 +77,7 @@ npm run web
 ## Build and quality commands
 
 ```bash
+npm run check       # Run lint, TypeScript validation and the one-shot Jest suite
 npm run build       # Export the web build with Expo
 npm run export-web  # Explicit web export
 npm run lint        # Expo lint
@@ -84,6 +85,8 @@ npm run typecheck   # Run TypeScript validation without emitting files
 npm test            # Jest in watch mode for local development
 npm run test:ci     # Run Jest once without watch mode (CI/pre-push)
 ```
+
+Use `npm run check` as the preferred local pre-push verification command. It runs the existing lint, typecheck and non-watch test commands in sequence without changing the build output.
 
 ## Web deployment
 
