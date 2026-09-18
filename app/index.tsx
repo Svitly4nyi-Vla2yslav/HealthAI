@@ -22,6 +22,7 @@ const WelcomeScreen = () => {
         <Image
           source={require("../assets/images/logo.png")}
           style={styles.logo}
+          accessible={false}
         />
         <Text style={styles.title}>HealthAI</Text>
         <Text style={styles.subtitle}>Ваш персональний помічник здоров'я</Text>
