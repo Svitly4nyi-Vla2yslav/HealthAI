@@ -62,7 +62,10 @@ const SignUpScreen = () => {
           accessibilityRole="button"
           accessibilityLabel="Увійти через Google"
         >
-          <SocialLogo source={require("../../assets/icons/google png.png")} />
+          <SocialLogo
+            source={require("../../assets/icons/google png.png")}
+            accessible={false}
+          />
         </SocialButton>
 
         <SocialButton
@@ -70,7 +73,10 @@ const SignUpScreen = () => {
           accessibilityRole="button"
           accessibilityLabel="Увійти через Facebook"
         >
-          <SocialLogo source={require("../../assets/icons/Facebook_png.png")} />
+          <SocialLogo
+            source={require("../../assets/icons/Facebook_png.png")}
+            accessible={false}
+          />
         </SocialButton>
       </SocialContainer>
 
