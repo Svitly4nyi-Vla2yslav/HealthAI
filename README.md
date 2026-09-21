@@ -57,6 +57,8 @@ HealthAI/
 ### Install
 
 ```bash
+git clone https://github.com/Svitly4nyi-Vla2yslav/HealthAI.git
+cd HealthAI
 npm install
 ```
 
