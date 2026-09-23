@@ -54,6 +54,8 @@ HealthAI/
 - npm
 - Expo tooling through `npx`
 
+For native targets, the platform tooling still applies: the iOS simulator requires macOS with Xcode, while Android emulator development requires an Android SDK/emulator setup. The web target can be run without either native toolchain.
+
 ### Install
 
 ```bash
